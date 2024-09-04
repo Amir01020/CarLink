@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CardList from '../components/cardList';
+import CardList from '../components/cardList.jsx';
 import { CiCalendar, CiDark } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineUsers } from "react-icons/hi2";

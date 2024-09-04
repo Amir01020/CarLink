@@ -1,11 +1,6 @@
 import Button_foot from '../components/Button_foot'
-
-
 import Filter_comp from '../components/Filter_comp'
-
-
 import { useState } from 'react'
-
 import { IoIosMore } from 'react-icons/io'
 
 const arr = [
