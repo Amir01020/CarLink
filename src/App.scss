@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: all 0.3s;
+}
+
+.cont {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.link_color {
+
+    // transition: all 0.5s ;
+    &:hover {
+        color: #0047E1;
+
+        .hover_svg {
+            fill: #0047E1;
+        }
+    }
+
+}
+
+
+.btn_hover {
+    &:hover {
+        path {
+            fill: #9298A4;
+        }
+    }
+}
+
+.text_anim1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s;
+    font-weight: 500;
+    // height: ;
+    cursor: pointer;
+    gap: 20px;
+
+    div {
+        transition: all 0.5s;
+        transform: scaleX(0);
+
+    }
+
+    &:hover {
+        color: #0047E1;
+
+        div {
+            transform: scaleX(1);
+
+        }
+    }
+}
+
+.text_anim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s;
+    font-weight: 500;
+    // height: ;
+    cursor: pointer;
+    gap: 20px;
+
+    div {
+        transition: all 0.5s;
+        transform: scaleX(0);
+
+    }
+
+    &:hover {
+        color: #56CA00;
+
+        div {
+            transform: scaleX(1);
+
+        }
+    }
+}
+
+.svg_1 svg {
+    width: 20px;
+
+}
+
+.svg_2 svg{
+    width: 30px;
+}
+
+.svg_3 svg{
+    width: 25px;
+}
+
+
+.MuiFormLabel-root{
+    font-size: 14px !important;
+}
+
+
+.MuiTypography-root{
+    font-size: 12px !important;
+}
