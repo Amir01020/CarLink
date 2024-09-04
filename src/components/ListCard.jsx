@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CardList = (props) => {
+const ListCard = (props) => {
     return (
         <div className='bg-white w-[15%] h-[190px] p-4 rounded-xl'>
             <div className="flex justify-between">
@@ -15,4 +15,4 @@ const CardList = (props) => {
 
 
 
-export default CardList;
+export default ListCard;

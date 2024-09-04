@@ -5,7 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { IoChatbubbleOutline, IoCheckmark } from "react-icons/io5";
 import { MdOutlineLightMode } from 'react-icons/md';
-import CardList from '../components/cardList';
+import ListCard from '../components/ListCard';
+
 const cardListArr = [
     {
         text1: '215',
@@ -109,7 +110,7 @@ const Home = () => {
                     <h2 className='text-[20px] font-[600] mb-10 mt-5 ml-10'>Welcome Alan</h2>
                     <div className="mx-10 flex justify-between">
                         {cardListArr.map((item, index) => (
-                            <CardList key={index} text1={item.text1} text2={item.text2} img={item.img} />
+                            <ListCard key={index} text1={item.text1} text2={item.text2} img={item.img} />
                         ))}
                     </div>
                     <h2 className='text-[36px] font-[600] ml-10 mt-10'>
