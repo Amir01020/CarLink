@@ -2,14 +2,15 @@ import Button_foot from '../components/Button_foot'
 import Filter_comp from '../components/Filter_comp'
 import { useState } from 'react'
 import { IoIosMore } from 'react-icons/io'
+import OrderFilter from '../components/OrderFilter'
 
 const arr = [
     {
         "ID": '300442995-RY',
         "Quoted": "02.09.2024   04:36 PM",
         "Notes": false,
-        "provider": "LP:1k",
-
+        "provider":"LP:1k",
+        
         "Assignet": {
             name: 'Lana Del Rey',
             img: '/img.png'
@@ -35,12 +36,12 @@ const arr = [
         "Est": "02.09.2024",
         "Status": "quote",
         "checkbox": false
-    }, {
+    },{
         "ID": '300442995-RY',
         "Quoted": "02.09.2024   04:36 PM",
         "Notes": false,
-        "provider": "",
-
+        "provider":"",
+        
         "Assignet": {
             name: 'Lana Del Rey',
             img: '/img.png'
@@ -70,15 +71,16 @@ const arr = [
 ]
 
 const filter_arr = [
-    'Follow-up Today',
-    'Quotes',
+    'Orders',
+    'Posted CD',
+    'Not signed',
+    'Dispatched',
+    'Issues',
+    'Picked-Up',
     'Hold',
     'Archived',
 ]
 const About = () => {
-
-    const [btn_item, setBtnitem] = useState(true)
-
     const [DataArr, setDataArr] = useState([...arr]);
 
     function handleSelectAll(event) {
@@ -113,13 +115,13 @@ const About = () => {
 
     return (
         <div className="">
-            <Filter_comp arr={filter_arr} />
+            <OrderFilter arr={filter_arr} />
             <div className="cont px-[10px] pt-[50px]">
 
                 <table className='w-full'>
-                    <thead>
+                    <thead className='text-center'>
                         <tr className='bg-[#FCFCFC] h-[100px]'>
-                            <th className='px-[10px] py-[20px] text-start pr-[20px] flex items-center gap-9 text-[16px] font-[600] text-[#585757]'>
+                            <th className='py-[20px]   flex items-center gap-9 text-[16px] font-[600] text-[#585757]'>
                                 <input
                                     type="checkbox"
                                     // checked={checkedItems}
@@ -127,18 +129,18 @@ const About = () => {
                                     className='w-[15px] border-[2px] h-[32px] rounded-xl' />
                                 ID
                             </th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Quoted</th>
-                            <th className='px-[30px] text-start pl-9 py-[20px] text-[16px] font-[600] text-[#585757]'>Notes</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Assigned to</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Shipper</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Vehicles</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Orig/Dest</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Quote</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Est. Ship</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Status</th>
+                            <th className=' py-[20px] text-[16px] font-[600] text-[#585757]'>Quoted</th>
+                            <th className='text-start text-[16px] font-[600] text-[#585757]'>Notes</th>
+                            <th className='text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Assigned to</th>
+                            <th className='text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Shipper</th>
+                            <th className='text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Vehicles</th>
+                            <th className='text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Orig/Dest</th>
+                            <th className=' py-[20px] text-[16px] font-[600] text-[#585757]'>Quote</th>
+                            <th className=' py-[20px] text-[16px] font-[600] text-[#585757]'>Est. Ship</th>
+                            
                         </tr>
                     </thead>
-                    <tbody >
+                    <tbody className='text-center'>
                         {DataArr.map((i, index) => (
                             <tr
                                 key={i.id}
@@ -154,10 +156,11 @@ const About = () => {
                                             className='w-[15px] border-[2px] h-[32px] rounded-xl'
                                             name=""
                                             id="" />
+
                                         <div className="text-start">
                                             <p className='text-[#4880FF]'>{i.ID}</p>
                                             <p className='text-[#56CA00]'>{i.provider}</p>
-                                            
+                                            <p className='text-[#979797]'>{i.Status}</p>
                                         </div>
                                     </div>
                                 </td>
@@ -210,11 +213,8 @@ const About = () => {
                                     <p>Tariff: <span className='text-[#FF4F00] font-[700]'>${i.Quote.Tariff}</span></p>
                                     <p>Deposit: <span className='text-[#4880FF] mt-[15px] font-[700]'>${i.Quote.Deposit}</span></p>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>{i.Est}</td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <div
-                                        className={`${i.Status == "quote" ? 'bg-[#F0FFF2] text-[#56CA00]' : i.Status == 'hold' ? 'text-[#4880FF] bg-[#ECF1FF]' : 'text-[#FF4F00] bg-[#FFE6DB]'} min-w-[80px] rounded-full px-5 flex items-center justify-center py-2 bg-[#ECF1FF] text-[#4880FF]`}>{i.Status}</div>
-                                </td>
+                                <td className='text-[12px] px-[10px] text-center  font-[600] '>{i.Est}</td>
+                                
                             </tr>
                         ))}
 

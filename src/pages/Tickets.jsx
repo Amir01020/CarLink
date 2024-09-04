@@ -2,6 +2,7 @@ import Button_foot from '../components/Button_foot'
 import Filter_comp from '../components/Filter_comp'
 import { useState } from 'react'
 import { IoIosMore } from 'react-icons/io'
+import OrderFilter from '../components/OrderFilter'
 
 const arr = [
     {
@@ -70,15 +71,16 @@ const arr = [
 ]
 
 const filter_arr = [
-    'Follow-up Today',
-    'Quotes',
+    'Orders',
+    'Posted CD',
+    'Not signed',
+    'Dispatched',
+    'Issues',
+    'Picked-Up',
     'Hold',
     'Archived',
 ]
-const About = () => {
-
-    const [btn_item, setBtnitem] = useState(true)
-
+const Tickets = () => {
     const [DataArr, setDataArr] = useState([...arr]);
 
     function handleSelectAll(event) {
@@ -113,13 +115,13 @@ const About = () => {
 
     return (
         <div className="">
-            <Filter_comp arr={filter_arr} />
+            <OrderFilter arr={filter_arr} />
             <div className="cont px-[10px] pt-[50px]">
 
                 <table className='w-full'>
-                    <thead>
+                    <thead className='text-center'>
                         <tr className='bg-[#FCFCFC] h-[100px]'>
-                            <th className='px-[10px] py-[20px] text-start pr-[20px] flex items-center gap-9 text-[16px] font-[600] text-[#585757]'>
+                            <th className='py-[20px] text-center   flex items-center gap-9 text-[16px] font-[600] text-[#585757]'>
                                 <input
                                     type="checkbox"
                                     // checked={checkedItems}
@@ -127,23 +129,23 @@ const About = () => {
                                     className='w-[15px] border-[2px] h-[32px] rounded-xl' />
                                 ID
                             </th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Quoted</th>
-                            <th className='px-[30px] text-start pl-9 py-[20px] text-[16px] font-[600] text-[#585757]'>Notes</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Assigned to</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Shipper</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Vehicles</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Orig/Dest</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Quote</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Est. Ship</th>
-                            <th className='px-[30px] text-start py-[20px] text-[16px] font-[600] text-[#585757]'>Status</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Subject</th>
+                            <th className=' text-center text-[16px] font-[600] text-[#585757]'>Created By</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Assigned to</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Order #</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Follow Up</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Created</th>
+                            <th className=' text-center py-[20px] text-[16px] font-[600] text-[#585757]'>Status</th>
+
+
                         </tr>
                     </thead>
-                    <tbody >
+                    <tbody className='text-center'>
                         {DataArr.map((i, index) => (
                             <tr
-                                key={i.id}
+                                key={i.ID}
                                 className={`py-[10px] px-[10px] ${index % 2 != 0 ? 'bg-[#fff]' : 'bg-[#F7F6FE]'} border-b-[1px] border-b-[#BEBEBE]   `}>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
+                                <td className='py-5 text-[12px] px-[10px]  font-[600] '>
                                     <div className="flex items-center gap-5">
                                         <input
                                             onChange={() => {
@@ -154,67 +156,43 @@ const About = () => {
                                             className='w-[15px] border-[2px] h-[32px] rounded-xl'
                                             name=""
                                             id="" />
-                                        <div className="text-start">
+
+                                        <div className="">
                                             <p className='text-[#4880FF]'>{i.ID}</p>
-                                            <p className='text-[#56CA00]'>{i.provider}</p>
-                                            
+
                                         </div>
                                     </div>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
+                                <td className='py-5 text-[12px] text-[#4880FF] px-[10px]  font-[600] '>
                                     {i.Quoted}
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <div className="flex gap-5" key={i.Notes}>
-                                        <div className="w-[20px] h-[20px] border-[#979797] border-[2px] rounded-[5px] border-solid"></div>
-                                        <div className="w-[20px] h-[20px] border-[#979797] border-[2px] rounded-[5px] border-solid"></div>
-                                    </div>
+                                <td className='py-5 text-[12px]   font-[600] '>
+                                    <p>
+                                        Manager
+                                    </p>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <div className="flex gap-5 items-center">
+                                <td className='py-5 text-[12px] px-[10px]  font-[600] '>
+                                    <div className="flex gap-5 justify-center items-center">
                                         <div className="w-[36px] h-[36px] rounded-full overflow-hidden">
                                             <img className='w-full' src={i.Assignet.img} alt="" /></div>
                                         {i.Assignet.name}
                                     </div>
                                 </td>
-                                <td className='text-[12px] px-[10px] py-2 font-[600] '>
-                                    <div className="flex mb-[10px] items-center gap-3">
-                                        <img className='w-5' src="/person.svg" alt="" /><p>{i.Shipper.userName}</p>
-                                    </div>
-                                    <div className="flex mb-[10px] items-center gap-3">
-                                        <img className='w-5' src="/Vector.svg" alt="" /><p>{i.Shipper.userTel}</p>
-                                    </div>
-                                    <div className="flex mb-[10px] items-center gap-3">
-                                        <img className='w-5' src="/Vector-1.svg" alt="" /><p>{i.Shipper.userEmail}</p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <img className='w-5' src="/Vector-2.svg" alt="" /><p>{i.Shipper.userUrls}</p>
-                                    </div>
+                                <td className='py-5 text-[12px] text-[#4880FF] px-[10px]  font-[600] '>
+                                    <p>300442995-RY</p>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <div className="flex gap-3 items-center">
-                                        <img className='w-16' src={i.Vehicles.img_auto} alt="" />
-                                        <p>{i.Vehicles.name_auto}</p>
-                                    </div>
+                                <td className='py-5 text-[12px] px-[10px]  font-[600] '>
+                                    <p>#4880FF</p>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <div className="flex items-center gap-5">
-                                        <img src="/dot.svg" className='w-3' alt="" /><p>{i.path.Orig}</p>
-                                    </div>
-                                    <img src="/line.svg" className='w-3' alt="" />
-                                    <div className="flex items-center gap-5">
-                                        <img src="/flag.svg" className='w-3' alt="" /><p>{i.path.Dest}</p>
-                                    </div>
+                                <td className='py-5 text-[12px] px-[10px]  font-[600] '>
+                                    <p>02.09.2024   04:36 PM</p>
                                 </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
-                                    <p>Tariff: <span className='text-[#FF4F00] font-[700]'>${i.Quote.Tariff}</span></p>
-                                    <p>Deposit: <span className='text-[#4880FF] mt-[15px] font-[700]'>${i.Quote.Deposit}</span></p>
-                                </td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>{i.Est}</td>
-                                <td className='text-[12px] px-[10px]  font-[600] '>
+
+                                <td className='py-5 text-[12px] px-[10px]  font-[600] '>
                                     <div
                                         className={`${i.Status == "quote" ? 'bg-[#F0FFF2] text-[#56CA00]' : i.Status == 'hold' ? 'text-[#4880FF] bg-[#ECF1FF]' : 'text-[#FF4F00] bg-[#FFE6DB]'} min-w-[80px] rounded-full px-5 flex items-center justify-center py-2 bg-[#ECF1FF] text-[#4880FF]`}>{i.Status}</div>
                                 </td>
+
                             </tr>
                         ))}
 
@@ -248,4 +226,4 @@ const About = () => {
 
 
 
-export default About;
+export default Tickets;

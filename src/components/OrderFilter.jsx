@@ -3,7 +3,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 
-const Filter_comp = ({ arr }) => {
+const OrderFilter = ({ arr }) => {
 
     const [list_oupen, setListOupen] = useState(false)
     const [all_list_oupen, setAllListOupen] = useState(false)
@@ -23,11 +23,11 @@ const Filter_comp = ({ arr }) => {
     }
 
     return (
-        <div className="cont px-[20px] pt-[50px] flex justify-between">
-            <div className="flex gap-5">
+        <div className="cont px-[20px] pt-[50px] flex justify-between items-center">
+            <div className="flex gap-5 items-center">
                 {
-                    arr.map((i,idx) => (
-                        <p key={idx} className='text_anim text-[14px] text-[#585757] '>
+                    arr.map((i, idx) => (
+                        <p key={idx} className='whitespace-nowrap text_anim text-[14px] text-[#585757] '>
                             {i}
                             <div className="w-full bg-[#56CA00] h-[2px] rounded-[10px]"></div>
                         </p>
@@ -41,7 +41,7 @@ const Filter_comp = ({ arr }) => {
                     <div className="h-full px-[20px] border-r-[1px] border-r-[#9797976b] py-[15px]">
                         <img className='w-[28px]' src="/filter.svg" alt="" />
                     </div>
-                    <div className="h-full flex items-center border-r-[1px] border-r-[#9797976b] text-[14px] text-[#7A7A7A] font-[700] px-[15px]">Filter By</div>
+                    
                     <div className=" cursor-pointer h-full border-r-[1px]  flex items-center gap-10 px-[15px] relative border-r-[#9797976b] ">
                         <p
                             onClick={list_click}
@@ -98,4 +98,4 @@ const Filter_comp = ({ arr }) => {
 
 
 
-export default Filter_comp;
+export default OrderFilter;

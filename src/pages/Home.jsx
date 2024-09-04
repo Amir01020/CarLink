@@ -6,6 +6,7 @@ import { HiOutlineUsers } from "react-icons/hi2";
 import { IoChatbubbleOutline, IoCheckmark } from "react-icons/io5";
 import { MdOutlineLightMode } from 'react-icons/md';
 import ListCard from '../components/ListCard';
+import { Link } from 'react-router-dom';
 
 const cardListArr = [
     {
@@ -57,9 +58,9 @@ const Home = () => {
             <div className="flex">
                 <div className="h-[calc(100vh-85px)] flex flex-col justify-between items-center w-[300px] p-7">
                     <div className="w-full">
-                        <a href="#" className='link_color  text-[#9298A4] flex items-center gap-5 mb-5'>
+                        <Link  to='/quotes/add' className='link_color  text-[#9298A4] flex items-center gap-5 mb-5'>
                             <img className='w-[30px]' src="/createQuote.svg" alt="Create quote" />Create quote
-                        </a>
+                        </Link>
                         <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
                             <img className='w-[30px]' src="/newLeads.svg" alt="New leads" />New leads
                         </a>

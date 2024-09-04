@@ -1,22 +1,33 @@
-
-
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import './App.scss'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Quotes from './pages/Quotes'
+import Orders from './pages/Orders'
+import Leads from './pages/Leads'
+import Register from './layouts/Register'
+import Tickets from './pages/Tickets'
 
 function App() {
-  
-
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout/>}>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/quotes' element={<Quotes/>}/>
+        {/* Redirect root path to /register */}
+        <Route path="/" element={<Navigate to="/register" replace />} />
+
+        {/* Register page as a main route */}
+        <Route path='/register' element={<Register />} />
+
+        {/* Other routes */}
+        <Route path='/' element={<Layout />}>
+          <Route path='/home' element={<Home />} />
+          <Route path='/quotes' element={<About />} />
+          <Route path='/orders' element={<Orders />} />
+          <Route path='/regiter' element={<Orders />} />
+          <Route path='/tickets' element={<Tickets />} />
+          <Route path='/leads' element={<Leads />} />
+          <Route path='/quotes/add' element={<Quotes />} />
         </Route>
       </Routes>
     </>
