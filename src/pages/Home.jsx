@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import CardList from '../components/cardList.jsx';
+
 import { CiCalendar, CiDark } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { IoChatbubbleOutline, IoCheckmark } from "react-icons/io5";
 import { MdOutlineLightMode } from 'react-icons/md';
+import CardList from '../components/cardList';
 const cardListArr = [
     {
         text1: '215',
