@@ -41,7 +41,8 @@
     font-weight: 500;
     // height: ;
     cursor: pointer;
-    gap: 20px;
+    gap: 5px;
+
 
     div {
         transition: all 0.5s;
@@ -65,9 +66,10 @@
     justify-content: center;
     transition: all 0.3s;
     font-weight: 500;
+    flex-wrap: wrap;
     // height: ;
     cursor: pointer;
-    gap: 20px;
+    gap: 5px;
 
     div {
         transition: all 0.5s;
@@ -86,16 +88,16 @@
 }
 
 .svg_1 svg {
-    width: 20px;
+    width: 10px;
 
 }
 
 .svg_2 svg{
-    width: 30px;
+    width: 10px;
 }
 
 .svg_3 svg{
-    width: 25px;
+    width: 14px;
 }
 
 

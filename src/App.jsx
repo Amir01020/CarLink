@@ -8,6 +8,9 @@ import Orders from './pages/Orders'
 import Leads from './pages/Leads'
 import Register from './layouts/Register'
 import Tickets from './pages/Tickets'
+import EditOrders from './pages/EditOrders'
+
+
 
 function App() {
   return (
@@ -21,13 +24,13 @@ function App() {
 
         {/* Other routes */}
         <Route path='/' element={<Layout />}>
-          <Route path='/home' element={<Home />} />
-          <Route path='/quotes' element={<About />} />
-          <Route path='/orders' element={<Orders />} />
-          <Route path='/regiter' element={<Orders />} />
-          <Route path='/tickets' element={<Tickets />} />
-          <Route path='/leads' element={<Leads />} />
-          <Route path='/quotes/add' element={<Quotes />} />
+          <Route path='home' element={<Home />} />
+          <Route path='quotes' element={<About />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='edit/:id' element={<EditOrders />} />
+          <Route path='tickets' element={<Tickets />} />
+          <Route path='leads' element={<Leads />} />
+          <Route path='quotes/add' element={<Quotes />} />
         </Route>
       </Routes>
     </>

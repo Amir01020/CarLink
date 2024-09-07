@@ -17,22 +17,22 @@ const cardListArr = [
     {
         text1: '215',
         text2: 'Quote',
-        img: '/car.svg'
+        img: '/dolar.svg'
     },
     {
         text1: '215',
         text2: 'Order',
-        img: '/car.svg'
+        img: '/order.svg'
     },
     {
         text1: '215',
         text2: 'Dispatches Today',
-        img: '/car.svg'
+        img: '/DispatchesToday.svg'
     },
     {
         text1: '215',
         text2: 'Pick-up Today',
-        img: '/car.svg'
+        img: '/Pick-upToday.svg'
     },
     {
         text1: '215',
@@ -56,58 +56,58 @@ const Home = () => {
 
         <>
             <div className="flex">
-                <div className="h-[calc(100vh-85px)] flex flex-col justify-between items-center w-[300px] p-7">
+                <div className="h-[calc(100vh-58px)] flex flex-col justify-between items-center w-[250px] p-7">
                     <div className="w-full">
-                        <Link  to='/quotes/add' className='link_color  text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/createQuote.svg" alt="Create quote" />Create quote
+                        <Link  to='/quotes/add' className='link_color text-[10px]  text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/createQuote.svg" alt="Create quote" />Create quote
                         </Link>
-                        <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/newLeads.svg" alt="New leads" />New leads
+                        <a href="#" className='link_color text-[10px] text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/newLeads.svg" alt="New leads" />New leads
                         </a>
-                        <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/postedToCdOrders.svg" alt="Posted to cd orders" />Posted to cd orders
+                        <a href="#" className='link_color text-[10px] text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/postedToCdOrders.svg" alt="Posted to cd orders" />Posted to cd orders
                         </a>
-                        <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/unreadMessages.svg" alt="Unread messages" />Unread messages
+                        <a href="#" className='link_color text-[10px] text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/unreadMessages.svg" alt="Unread messages" />Unread messages
                         </a>
-                        <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/openTickets.svg" alt="Open tickets" />Open tickets
+                        <a href="#" className='link_color text-[10px] text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/openTickets.svg" alt="Open tickets" />Open tickets
                         </a>
-                        <a href="#" className='link_color text-[#9298A4] flex items-center gap-5 mb-5'>
-                            <img className='w-[30px]' src="/driversManage.svg" alt="Drivers manage" />Drivers manage
+                        <a href="#" className='link_color text-[10px] text-[#9298A4] flex items-center gap-5 mb-5'>
+                            <img className='w-[20px]' src="/driversManage.svg" alt="Drivers manage" />Drivers manage
                         </a>
                     </div>
                     <div className="w-full flex flex-col items-center gap-10">
-                        <div className="w-[150px] h-[150px] flex items-end justify-center py-5 relative rounded-xl bg-[#3f8cff35]">
+                        <div className="w-[120px] h-[120px] flex items-end justify-center py-5 relative rounded-xl bg-[#3f8cff35]">
                             <img src="/home_img.svg" className='absolute w-4/5 -top-1/4' alt="" />
-                            <button className='flex items-center gap-2 text-white text-[14px] justify-center rounded-lg w-4/5 py-3 bg-[#3F8CFF]'>
-                                <IoChatbubbleOutline className='text-[20px]' />
+                            <button className='flex items-center gap-2 text-white text-[10px] justify-center rounded-lg w-4/5 py-3 bg-[#3F8CFF]'>
+                                <IoChatbubbleOutline className='text-[15px]' />
                                 Support
                             </button>
                         </div>
-                        <div onClick={()=>setTopic(!topic)} className="flex w-full relative justify-between py-4 cursor-pointer px-5 rounded-[20px] bg-[#EDF1F7]">
-                            <p className='flex items-center  text-[#979797] gap-2 text-[14px]'>
-                                <CiDark className='text-[20px]' />
+                        <div onClick={()=>setTopic(!topic)} className="flex w-full relative justify-between py-2 cursor-pointer px-5 rounded-[12px] bg-[#EDF1F7]">
+                            <p className='flex items-center  text-[#979797] gap-2 text-[10px]'>
+                                <CiDark className='text-[15px]' />
                                 Dark
                             </p>
-                            <p className='flex text-[#979797]  items-center gap-2 text-[14px]'>
-                                <MdOutlineLightMode className='text-[20px]' />
+                            <p className='flex text-[#979797]  items-center gap-2 text-[10px]'>
+                                <MdOutlineLightMode className='text-[15px]' />
                                 Light
                             </p>
-                            <div className={`absolute w-1/2 h-full ${topic?'translate-x-full':'translate-x-0'} left-0 flex items-center pl-5 shadow-lg  bg-[#3F8CFF] top-0  rounded-[20px]`}>
-                                <p className={`${!topic?'flex':'hidden'} items-center  text-[#fff] gap-1 text-[14px]`}>
-                                    <CiDark className='text-[25px]' />
+                            <div className={`absolute w-1/2 h-full ${topic?'translate-x-full':'translate-x-0'} left-0 flex items-center pl-5 shadow-lg  bg-[#3F8CFF] top-0  rounded-[12px]`}>
+                                <p className={`${!topic?'flex':'hidden'} items-center  text-[#fff] gap-1 text-[10px]`}>
+                                    <CiDark className='text-[15px]' />
                                     Dark
                                 </p>
-                                <p className={`${!topic?'hidden':'flex'} items-center  text-[#fff] gap-1 text-[14px]`}>
-                                    <MdOutlineLightMode className='text-[20px]' />
+                                <p className={`${!topic?'hidden':'flex'} items-center  text-[#fff] gap-1 text-[10px]`}>
+                                    <MdOutlineLightMode className='text-[15px]' />
                                     Light
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="h-[calc(100vh-85px)] w-full bg-[#F6F6F8] overflow-auto">
+                <div className="h-[calc(100vh-58px)] w-full bg-[#F6F6F8] overflow-auto">
                     <h2 className='text-[20px] font-[600] mb-10 mt-5 ml-10'>Welcome Alan</h2>
                     <div className="mx-10 flex justify-between">
                         {cardListArr.map((item, index) => (
@@ -122,16 +122,16 @@ const Home = () => {
                         <div className="w-1/2">
                             <div className="flex justify-end gap-5 w-full mb-5">
                                 <div className="bg-[#0047E1] cursor-pointer rounded-md items-center gap-6  px-4 py-3 text-white flex">
-                                    <p className='flex gap-3 items-center'>
-                                        <CiCalendar />
+                                    <p className='flex gap-3 text-[12px] items-center'>
+                                        <CiCalendar className='text-[16px]' />
                                         Range
 
                                     </p>
                                     <IoIosArrowDown />
                                 </div>
                                 <div className="bg-[#0047E1] cursor-pointer rounded-md items-center gap-6  px-4 py-3 text-white flex">
-                                    <p className='flex gap-3 items-center'>
-                                        <HiOutlineUsers />
+                                    <p className='flex gap-3 text-[12px] items-center'>
+                                        <HiOutlineUsers className='text-[16px]' />
                                         Agents
 
                                     </p>
