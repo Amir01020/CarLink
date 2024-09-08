@@ -7,7 +7,7 @@
 }
 
 .cont {
-    max-width: 1640px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -114,4 +114,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.swiper-pagination-bullet{
+    width: 5px !important;
+    height: 5px !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #56CA00 !important;
 }

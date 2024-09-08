@@ -33,7 +33,7 @@ const arr = [
             "Deposit": 0
         },
         "Est": "02.09.2024",
-        "Status": "quote",
+        "Status": "121212",
         "checkbox": false
     },{
         "ID": '300442995-RY1',

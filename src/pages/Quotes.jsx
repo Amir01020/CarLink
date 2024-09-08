@@ -42,6 +42,11 @@ const Quotes = () => {
     return (
         <div className=' px-5 pt-14 bg-[#F6F6F8]'>
             <div className="cont">
+                <div className="flex justify-end items-center gap-5 mb-5">
+                    <Button sx={{background:'#4880FF' , color:"white"}}>Save and send quote</Button>
+                    <Button sx={{background:'#4880FF' , color:"white"}}>Save and convert to oreder</Button>
+                    <Button sx={{background:'#56CA00' , color:"white"}}>EDIT</Button>
+                </div>
                 <div className=" bg-white px-10 py-5 rounded-xl mb-[50px]">
                     <h2 className='text-[#0047E1] text-[24px]'>Shipper information</h2>
                     <div className="w-full h-[1px] bg-[#BEBEBE] mb-5 mt-2"></div>
