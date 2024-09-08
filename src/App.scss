@@ -5,6 +5,9 @@
 * {
     transition: all 0.3s;
 }
+body{
+    overflow: hidden;
+}
 
 .cont {
     max-width: 1140px;
@@ -24,6 +27,13 @@
 
 }
 
+.actove_link {
+    color: #0047E1;
+
+    .hover_svg {
+        fill: #0047E1;
+    }
+}
 
 .btn_hover {
     &:hover {
@@ -92,34 +102,36 @@
 
 }
 
-.svg_2 svg{
+.svg_2 svg {
     width: 10px;
 }
 
-.svg_3 svg{
-    width: 14px;
+.svg_3 svg {
+    width: 10px;
 }
 
 
-.MuiFormLabel-root{
+.MuiFormLabel-root {
     font-size: 14px !important;
 }
 
 
-.MuiTypography-root{
+.MuiTypography-root {
     font-size: 12px !important;
 }
-.register_img{
+
+.register_img {
     background-image: url(./assets/Shape.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 5px !important;
     height: 5px !important;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     background-color: #56CA00 !important;
 }
