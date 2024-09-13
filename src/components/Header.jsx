@@ -102,7 +102,7 @@ const Header = () => {
                     <button className='w-[20px]  bg-[#F5F7FA] overflow-hidden rounded-[50%]  h-[20px]'>
                         <img src="/img.png" onClick={() => setCount(!count)} className='w-full' alt="" />
                         <div className={`absolute bottom-0 ${!count ? 'translate-x-full' : 'translate-x-0'} w-16 bg-[#ECF3FF] overflow-hidden right-0 translate-y-full p-2 px-3 rounded-[0px_0px_0px_10px]`}>
-                            <p className='text-[8px] text-start mb-1'>Profile</p>
+                            <p className='text-[8px] text-start mb-1'><Link to={'profile'}>Profile</Link></p>
                             <p className='text-[8px] text-start mb-1'>Admin</p>
                             <p className='text-[8px] text-start mb-1'>Help</p>
                             <p className='text-[8px] text-start mb-1'>Calls</p>

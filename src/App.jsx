@@ -9,6 +9,8 @@ import Leads from './pages/Leads'
 import Register from './layouts/Register'
 import Tickets from './pages/Tickets'
 import EditOrders from './pages/EditOrders'
+import Profile from './pages/Profile'
+import Admin from './pages/Admin'
 
 
 
@@ -25,11 +27,13 @@ function App() {
         {/* Other routes */}
         <Route path='/' element={<Layout />}>
           <Route path='home' element={<Home />} />
+          <Route path='admin' element={<Admin />} />
           <Route path='quotes' element={<About />} />
           <Route path='orders' element={<Orders />} />
           <Route path='edit/:id' element={<EditOrders />} />
           <Route path='tickets' element={<Tickets />} />
           <Route path='leads' element={<Leads />} />
+          <Route path='profile' element={<Profile />} />
           <Route path='quotes/add' element={<Quotes />} />
         </Route>
       </Routes>

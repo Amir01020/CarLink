@@ -83,18 +83,21 @@ const About = () => {
                                 key={i.id}
                                 className={`py-[10px] px-[5px] ${index % 2 != 0 ? 'bg-[#fff]' : 'bg-[#F7F6FE]'} border-b-[1px] border-b-[#BEBEBE]`}>
                                 {/* ID and Provider */}
-                                <td className='text-[8px] px-[5px] font-[600]'>
-                                    <Link to={`/edit/${i.ID}`} className="flex items-center gap-5">
+                                <td className='text-[8px]  px-[5px] font-[600]'>
+                                    <div className="flex items-center gap-1">
                                         <input
                                             onChange={() => handleCheckboxChange(i)}
                                             checked={i.checkbox}
                                             type="checkbox"
                                             className='w-[15px] border-[2px] h-[32px] rounded-xl' />
                                         <div className="text-start">
-                                            <p className='text-[#4880FF]'>{i.ID}</p>
+                                            <Link to={`/edit/${i.ID}`} className="flex items-center gap-5">
+
+                                                <p className='text-[#4880FF]'>{i.ID}</p>
+                                            </Link>
                                             <p className='text-[#56CA00]'>{i.provider}</p>
                                         </div>
-                                    </Link>
+                                    </div>
                                 </td>
 
                                 {/* Quoted */}

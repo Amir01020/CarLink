@@ -9,7 +9,7 @@ import Swiper_cont from '../components/Swiper_cont';
 import CardGogle from '../components/CardGogle';
 import { MdOutlineMail } from 'react-icons/md';
 import { CiSquareMore } from 'react-icons/ci';
-import Footer from '../components/Footer';
+
 import { IoIosMore } from 'react-icons/io';
 
 const EditOrders = () => {
