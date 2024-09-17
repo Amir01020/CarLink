@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.1",
     "@mui/x-date-pickers": "^7.15.0",
     "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.7.7",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

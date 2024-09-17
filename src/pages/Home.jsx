@@ -7,6 +7,7 @@ import { IoChatbubbleOutline, IoCheckmark } from "react-icons/io5";
 import { MdOutlineLightMode } from 'react-icons/md';
 import ListCard from '../components/ListCard';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const cardListArr = [
     {
@@ -37,18 +38,27 @@ const cardListArr = [
     {
         text1: '215',
         text2: 'Deliveries Today',
-        img: '/car.svg'
+        img: '/deliveriesToday.svg'
     },
 ];
 
 const Home = () => {
     const [topic, setTopic] = useState(true);
+    const host = 'https://api.carlink.pro'
+    const leads = '/api/v1/Leads/GetAll'
+    const authentication_post = '/api/v1/Authentication/Login'
+    const authentication_get = '/api/v1/Authentication/ValidateToken'
 
-
-
-
-
-
+    const urls = `${host + authentication_get}`
+    const user = {
+        "userName": "root",
+        "password": "Servak123!"
+      }
+    const post = () => {
+        axios.post(urls).then(res => {
+            console.log(res);
+        })
+    }
 
 
     return (
@@ -64,23 +74,30 @@ const Home = () => {
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
                             <img className='w-[14px]' src="/newLeads.svg" alt="New leads" />New leads
                         </a>
+
+
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/postedToCdOrders.svg" alt="Posted to cd orders" />Posted to cd orders
+                            <img className='w-[14px]' src="/tickets.svg" alt="" /><Link to={'/tickets'}>Tickets</Link>
+                        </a>
+
+                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
+                            <img className='w-[14px]' src="/reports.svg" alt="Drivers manage" /> <Link to={'/reports'}>Reports</Link>
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/unreadMessages.svg" alt="Unread messages" />Unread messages
+                            <img className='w-[14px]' src="/templates.svg" alt="Drivers manage" />Templates
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/openTickets.svg" alt="Open tickets" />Open tickets
+                            <img className='w-[14px]' src="/carriers.svg" alt="Drivers manage" /><Link to={'/carriers'}>Carriers</Link>
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/driversManage.svg" alt="Drivers manage" />Drivers manage
+                            <img className='w-[14px]' src="/payment.svg" alt="" />
+                            Payments
                         </a>
                     </div>
                     <div className="w-full flex flex-col items-center gap-5">
                         <div className="w-[80px] h-[80px] flex items-end justify-center py-2 relative rounded-xl bg-[#3f8cff35]">
                             <img src="/home_img.svg" className='absolute w-4/5 -top-1/4' alt="" />
-                            <button className='flex items-center gap-2 text-white text-[8px] justify-center rounded-md w-4/5 py-1 bg-[#3F8CFF]'>
+                            <button onClick={post} className='flex items-center gap-2 text-white text-[8px] justify-center rounded-md w-4/5 py-1 bg-[#3F8CFF]'>
                                 <IoChatbubbleOutline className='text-[10px]' />
                                 Support
                             </button>
@@ -160,7 +177,7 @@ const Home = () => {
                                         </div>
                                         <p className='text-[10px]'>Done</p>
                                     </div>
-                                  
+
                                 </div>
 
                                 <img src="/diogram.svg" className='w-1/2' alt="" />

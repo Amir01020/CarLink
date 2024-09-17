@@ -103,7 +103,7 @@ const Header = () => {
                         <img src="/img.png" onClick={() => setCount(!count)} className='w-full' alt="" />
                         <div className={`absolute bottom-0 ${!count ? 'translate-x-full' : 'translate-x-0'} w-16 bg-[#ECF3FF] overflow-hidden right-0 translate-y-full p-2 px-3 rounded-[0px_0px_0px_10px]`}>
                             <p className='text-[8px] text-start mb-1'><Link to={'profile'}>Profile</Link></p>
-                            <p className='text-[8px] text-start mb-1'>Admin</p>
+                            <p className='text-[8px] text-start mb-1'><Link to={'admin'}>Admin</Link></p>
                             <p className='text-[8px] text-start mb-1'>Help</p>
                             <p className='text-[8px] text-start mb-1'>Calls</p>
                             <div
@@ -116,7 +116,7 @@ const Header = () => {
                                     <CiDark className={`text-[8px] ${!topic ? 'text-[#102759]' : 'hidden '} `} />
                                 </div>
                             </div>
-                            <p className='text-[8px] text-start mb-1'>Logout</p>
+                            <p className='text-[8px] text-start mb-1'><Link to={'register'}>Logout</Link></p>
                         </div>
                     </button>
                 </div>

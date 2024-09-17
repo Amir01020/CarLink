@@ -11,6 +11,8 @@ import Tickets from './pages/Tickets'
 import EditOrders from './pages/EditOrders'
 import Profile from './pages/Profile'
 import Admin from './pages/Admin'
+import Reports from './pages/Reports'
+import Carriers from './pages/Carriers'
 
 
 
@@ -22,17 +24,20 @@ function App() {
         <Route path="/" element={<Navigate to="/register" replace />} />
 
         {/* Register page as a main route */}
-        <Route path='/register' element={<Register />} />
+        <Route path='register' element={<Register />} />
 
         {/* Other routes */}
         <Route path='/' element={<Layout />}>
           <Route path='home' element={<Home />} />
           <Route path='admin' element={<Admin />} />
           <Route path='quotes' element={<About />} />
+          <Route path='reports' element={<Reports />} />
           <Route path='orders' element={<Orders />} />
           <Route path='edit/:id' element={<EditOrders />} />
           <Route path='tickets' element={<Tickets />} />
           <Route path='leads' element={<Leads />} />
+          <Route path='carriers' element={<Carriers />} />
+          <Route path='reports/customers' element={<Leads />} />
           <Route path='profile' element={<Profile />} />
           <Route path='quotes/add' element={<Quotes />} />
         </Route>
