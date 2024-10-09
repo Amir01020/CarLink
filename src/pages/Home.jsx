@@ -84,14 +84,15 @@ const Home = () => {
                             <img className='w-[14px]' src="/reports.svg" alt="Drivers manage" /> <Link to={'/reports'}>Reports</Link>
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/templates.svg" alt="Drivers manage" />Templates
+                            <img className='w-[14px]' src="/templates.svg" alt="Drivers manage" />
+                            <Link to={'/templates'}>Templates</Link>
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
                             <img className='w-[14px]' src="/carriers.svg" alt="Drivers manage" /><Link to={'/carriers'}>Carriers</Link>
                         </a>
                         <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
                             <img className='w-[14px]' src="/payment.svg" alt="" />
-                            Payments
+                            <Link to={'/payments'}>Payments</Link>
                         </a>
                     </div>
                     <div className="w-full flex flex-col items-center gap-5">

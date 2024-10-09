@@ -13,6 +13,10 @@ import Profile from './pages/Profile'
 import Admin from './pages/Admin'
 import Reports from './pages/Reports'
 import Carriers from './pages/Carriers'
+import CarriersProfile from './pages/CarriersProfile'
+import Messages from './pages/Messages'
+import Payments from './pages/Payments'
+import Templates from './pages/Templates'
 
 
 
@@ -37,6 +41,10 @@ function App() {
           <Route path='tickets' element={<Tickets />} />
           <Route path='leads' element={<Leads />} />
           <Route path='carriers' element={<Carriers />} />
+          <Route path='messages' element={<Messages />} />
+          <Route path='templates' element={<Templates />} />
+          <Route path='payments' element={<Payments />} />
+          <Route path='carriers/:id' element={<CarriersProfile />} />
           <Route path='reports/customers' element={<Leads />} />
           <Route path='profile' element={<Profile />} />
           <Route path='quotes/add' element={<Quotes />} />
