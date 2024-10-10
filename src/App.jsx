@@ -17,6 +17,7 @@ import CarriersProfile from './pages/CarriersProfile'
 import Messages from './pages/Messages'
 import Payments from './pages/Payments'
 import Templates from './pages/Templates'
+import Users from './pages/Users'
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route path='home' element={<Home />} />
           <Route path='admin' element={<Admin />} />
+          <Route path='admin/users' element={<Users />} />
           <Route path='quotes' element={<About />} />
           <Route path='reports' element={<Reports />} />
           <Route path='orders' element={<Orders />} />

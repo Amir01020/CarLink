@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Ttext = ({ title, comment, status,id,control, setControl}) => {
+const Ttext = ({ title, comment, status,id,control, setControl ,linkUrl}) => {
    
 
     const updateItem = (id) => {
@@ -19,7 +20,7 @@ const Ttext = ({ title, comment, status,id,control, setControl}) => {
         <div
             onClick={() => updateItem(id)} // Используем числовое значение id
             className={`cursor-pointer transition-[0.3s] mb-2 hover:text-[#0047E1] ${status ? 'text-[#0047E1]' : ''}`}>
-            <h4 className='text-[12px] font-[600]'>{title}</h4>
+            <h4 className='text-[12px] font-[600]'><Link to={linkUrl}>{title}</Link></h4>
             <p className='text-[6px] mt-0 opacity-60 font-[600]'>{comment}</p>
             <div className="h-[0.5px] mt-2 bg-[#9298A4]" />
         </div>
