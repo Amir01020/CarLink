@@ -1,8 +1,9 @@
 // Import necessary dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import { DataProvider } from '../context/DataContext';
+import Modal from '../components/Modal';
 
 const arr = [
     {
@@ -35,7 +36,7 @@ const arr = [
         "Est": "02.09.2024",
         "Status": "121212",
         "checkbox": false
-    },{
+    }, {
         "ID": '300442995-RY1',
         "Quoted": "02.09.2024   04:36 PM",
         "Notes": false,
@@ -65,7 +66,7 @@ const arr = [
         "Est": "02.09.2024",
         "Status": "quote",
         "checkbox": false
-    },{
+    }, {
         "ID": '300442995-RY3',
         "Quoted": "02.09.2024   04:36 PM",
         "Notes": false,
@@ -95,7 +96,7 @@ const arr = [
         "Est": "02.09.2024",
         "Status": "quote",
         "checkbox": false
-    },{
+    }, {
         "ID": '300442995-RY4',
         "Quoted": "02.09.2024   04:36 PM",
         "Notes": false,
@@ -130,13 +131,20 @@ const arr = [
 ]
 
 const Layout = () => {
+    const [count, setCount] = useState(false);
+    
     return (
-        <DataProvider data={arr}> {/* Use DataProvider to provide context */}
-            <Header />
-            <main>
-                <Outlet />
-            </main>
-        </DataProvider>
+     
+            <DataProvider data={arr}> {/* Use DataProvider to provide context */}
+                <Header oupen={count} setOupen={setCount} />
+
+                <main>
+                    <Outlet />
+                    <Modal oupen={count} />
+                </main>
+            </DataProvider>
+       
+
     );
 };
 

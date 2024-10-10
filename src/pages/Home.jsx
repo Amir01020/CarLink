@@ -66,66 +66,8 @@ const Home = () => {
 
         <>
             <div className="flex">
-                <div className="h-[calc(100vh-58px)] flex flex-col justify-between items-center w-[150px] p-3">
-                    <div className="w-full">
-                        <Link to='/quotes/add' className='link_color text-[8px]  text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/createQuote.svg" alt="Create quote" />Create quote
-                        </Link>
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/newLeads.svg" alt="New leads" />New leads
-                        </a>
-
-
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/tickets.svg" alt="" /><Link to={'/tickets'}>Tickets</Link>
-                        </a>
-
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/reports.svg" alt="Drivers manage" /> <Link to={'/reports'}>Reports</Link>
-                        </a>
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/templates.svg" alt="Drivers manage" />
-                            <Link to={'/templates'}>Templates</Link>
-                        </a>
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/carriers.svg" alt="Drivers manage" /><Link to={'/carriers'}>Carriers</Link>
-                        </a>
-                        <a href="#" className='link_color text-[8px] text-[#9298A4] flex items-center gap-2 mb-2'>
-                            <img className='w-[14px]' src="/payment.svg" alt="" />
-                            <Link to={'/payments'}>Payments</Link>
-                        </a>
-                    </div>
-                    <div className="w-full flex flex-col items-center gap-5">
-                        <div className="w-[80px] h-[80px] flex items-end justify-center py-2 relative rounded-xl bg-[#3f8cff35]">
-                            <img src="/home_img.svg" className='absolute w-4/5 -top-1/4' alt="" />
-                            <button onClick={post} className='flex items-center gap-2 text-white text-[8px] justify-center rounded-md w-4/5 py-1 bg-[#3F8CFF]'>
-                                <IoChatbubbleOutline className='text-[10px]' />
-                                Support
-                            </button>
-                        </div>
-                        <div onClick={() => setTopic(!topic)} className="flex w-full relative justify-between py-2 cursor-pointer px-2 rounded-xl bg-[#EDF1F7]">
-                            <p className='flex items-center  text-[#979797] gap-2 text-[8px]'>
-                                <CiDark className='text-[10px]' />
-                                Dark
-                            </p>
-                            <p className='flex text-[#979797]  items-center gap-2 text-[8px]'>
-                                <MdOutlineLightMode className='text-[10px]' />
-                                Light
-                            </p>
-                            <div className={`absolute w-1/2 h-full ${topic ? 'translate-x-full' : 'translate-x-0'} left-0 flex items-center pl-2 shadow-lg  bg-[#3F8CFF] top-0  rounded-[12px]`}>
-                                <p className={`${!topic ? 'flex' : 'hidden'} items-center  text-[#fff] gap-1 text-[8px]`}>
-                                    <CiDark className='text-[10px]' />
-                                    Dark
-                                </p>
-                                <p className={`${!topic ? 'hidden' : 'flex'} items-center  text-[#fff] gap-1 text-[8px]`}>
-                                    <MdOutlineLightMode className='text-[10px]' />
-                                    Light
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="h-[calc(100vh-58px)] w-full bg-[#F6F6F8] overflow-auto">
+               
+                <div className="w-full bg-[#F6F6F8] overflow-auto">
                     <h2 className='text-[14px] font-[600] mb-5 mt-3 ml-5'>Welcome Alan</h2>
                     <div className="mx-5 flex justify-between">
                         {cardListArr.map((item, index) => (

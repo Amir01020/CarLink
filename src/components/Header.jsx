@@ -4,14 +4,14 @@ import { MdOutlineLightMode } from 'react-icons/md';
 import { Link, useLocation } from 'react-router-dom';
 
 
-const Header = () => {
+const Header = ({setOupen,oupen}) => {
     const location = useLocation()
     const [count, setCount] = useState(false);
     const [topic, setTopic] = useState(true);
     return (
         <header className='shadow-[0px_2px_4px_0px_#00000040] relative z-40' >
             <nav className='cont flex justify-between items-center px-[20px] py-1'>
-                <Link to="/home">
+                <Link onClick={()=>setOupen(!oupen)}>
                     <img src="/logo.svg" className='w-[150px] hidden xs:block' alt="" />
                     <img src="/logo2.svg" className='w-[25px] block xs:hidden' alt="" />
                 </Link>
