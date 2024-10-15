@@ -5,6 +5,7 @@ import { IoIosMore } from 'react-icons/io'
 import OrderFilter from '../components/OrderFilter'
 import { useData } from '../context/DataContext';
 import { Link } from 'react-router-dom'
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai'
 
 
 
@@ -60,23 +61,90 @@ const Leads = () => {
                 <table className='w-full'>
                     <thead>
                         <tr className='bg-[#FCFCFC] h-[60px]'>
-                            <th className='px-[10px] py-[10px] text-start pr-[10px] flex items-center gap-5 text-[10px] font-[600] text-[#585757]'>
-                                <input
-                                    type="checkbox"
-                                    onChange={handleSelectAll}
-                                    className='w-[15px] border-[2px] h-[32px] rounded-xl' />
-                                ID
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    <input
+                                        type="checkbox"
+                                        onChange={handleSelectAll}
+                                        className='w-[15px] border-[2px] h-[32px] rounded-xl' />
+                                    ID
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
                             </th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Quoted</th>
-                            <th className='px-[10px] text-start pl-9 py-[10px] text-[10px] font-[600] text-[#585757]'>Notes</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Assigned to</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Shipper</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Vehicles</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Orig/Dest</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Quote</th>
-                            <th className='px-[10px] text-start py-[10px] text-[10px] font-[600] text-[#585757]'>Est. Ship</th>
-
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Quoted
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Notes
+                                    
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Assigned to
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Shipper
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Vehicles
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Orig/Dest
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Quote
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
+                            <th className="px-1 py-3 text-left text-[8px] font-medium text-gray-500 tracking-wider">
+                                <div className="flex items-center gap-1">
+                                    Est. Ship
+                                    <div className="flex flex-col gap-0 cursor-pointer">
+                                        <AiFillCaretUp className='text-[8px]' />
+                                        <AiFillCaretDown className='text-[8px]' />
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
+
                     </thead>
                     <tbody >
                         {DataArr.map((i, index) => (

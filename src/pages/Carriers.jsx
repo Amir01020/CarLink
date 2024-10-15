@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Filter from '../components/carriers_components/Filter';
 import { Link } from 'react-router-dom';
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 
 
 const arr = [
@@ -72,7 +73,7 @@ const Carriers = () => {
       ...item,
       activity: hasFalse ? true : false
     }));
-   
+
 
     setNewArr(updatedItems);
   };
@@ -84,29 +85,72 @@ const Carriers = () => {
       <table className="min-w-full mt-5 divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
               <div className="flex items-center gap-2">
                 <input onChange={allCheckbox} checked={!hasFalse} type="checkbox" name="" id="" />
-                Type
+
+                <div className="flex items-center gap-1">
+                  Type
+                  <div className="flex flex-col gap-0 cursor-pointer">
+                    <AiFillCaretUp className='text-[8px]' />
+                    <AiFillCaretDown className='text-[8px]' />
+                  </div>
+                </div>
               </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              Name
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                Name
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              Contact
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                Contact
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              Address
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                Address
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              City
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                City
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              State
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                State
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
-            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500 uppercase tracking-wider">
-              Phone
+            <th className="px-6 py-3 text-left text-[8px] font-medium text-gray-500  tracking-wider">
+              <div className="flex items-center gap-1">
+                Phone
+                <div className="flex flex-col gap-0 cursor-pointer">
+                  <AiFillCaretUp className='text-[8px]' />
+                  <AiFillCaretDown className='text-[8px]' />
+                </div>
+              </div>
             </th>
           </tr>
         </thead>
@@ -117,7 +161,7 @@ const Carriers = () => {
 
               <td className="px-6 py-2 whitespace-nowrap text-[8px]">
                 <input type="checkbox" onChange={() => checkboxFunc(i.id)} checked={i.activity} />
-               
+
               </td>
               <td className="px-6 py-2 whitespace-nowrap text-[8px] text-blue-500 hover:underline">
                 <Link to={`${i.id}`}>{i.name}</Link>
