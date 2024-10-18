@@ -5,7 +5,7 @@ import { IoIosMore } from 'react-icons/io';
 
 const Templates = () => {
     return (
-        <div>
+        <div className='cont'>
             <Filter />
             <div className="px-3">
                 <table class="min-w-full text-[8px] mt-5 ">

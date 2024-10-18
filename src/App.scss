@@ -8,12 +8,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
 
 .cont {
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -23,6 +24,7 @@ body{
     &:hover {
         color: #0047E1;
         text-decoration: underline;
+
         .hover_svg {
             fill: #0047E1;
         }
@@ -137,4 +139,18 @@ body{
 
 .swiper-pagination-bullet-active {
     background-color: #56CA00 !important;
+}
+
+
+@media (min-width: 1140px) {
+    .svg_1 svg {
+        width: 14px;
+    }
+    .svg_2 svg {
+        width: 14px;
+    }
+    
+    .svg_3 svg {
+        width: 14px;
+    }
 }

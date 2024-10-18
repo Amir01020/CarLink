@@ -140,7 +140,7 @@ const Layout = () => {
 
                 <main>
                     <Outlet />
-                    <Modal oupen={count} />
+                    <Modal oupen={count} setOupen={setCount} />
                 </main>
             </DataProvider>
        

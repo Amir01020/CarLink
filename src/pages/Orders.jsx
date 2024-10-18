@@ -85,7 +85,7 @@ const About = () => {
                             <th className='px-[5px] py-[10px] text-[8px] font-[600] text-[#585757]'>
                                 <div className="flex items-center gap-1">
                                     Notes
-                                   
+
                                 </div>
                             </th>
                             <th className='px-[5px] py-[10px] text-[8px] font-[600] text-[#585757]'>
@@ -251,14 +251,16 @@ const About = () => {
 
 
             </div>
-            <div className="flex justify-between items-center px-[10px] mt-5 mb-[10px]">
-                <p className='text-[10px]'>Showing 1-09 of 78</p>
-                <div className="border-[0.6px] overflow-hidden border-[#D5D5D5] rounded-md flex items-center justify-center">
-                    <div className="hover:bg-[#e4e2e2] overflow-hidden cursor-pointer border-r-[1px] border-r-[#979797]">
-                        <img src="/arrow.svg" className='mx-[20px] w-[8px] my-[5px] rotate-[180deg]' alt="" />
-                    </div>
-                    <div className="hover:bg-[#e4e2e2] overflow-hidden cursor-pointer">
-                        <img src="/arrow.svg" className='mx-[20px] w-[8px] my-[5px]' alt="" />
+            <div className="cont">
+                <div className="flex justify-between items-center px-[10px] mt-5 mb-[10px]">
+                    <p className='text-[10px]'>Showing 1-09 of 78</p>
+                    <div className="border-[0.6px] overflow-hidden border-[#D5D5D5] rounded-md flex items-center justify-center">
+                        <div className="hover:bg-[#e4e2e2] overflow-hidden cursor-pointer border-r-[1px] border-r-[#979797]">
+                            <img src="/arrow.svg" className='mx-[20px] w-[8px] my-[5px] rotate-[180deg]' alt="" />
+                        </div>
+                        <div className="hover:bg-[#e4e2e2] overflow-hidden cursor-pointer">
+                            <img src="/arrow.svg" className='mx-[20px] w-[8px] my-[5px]' alt="" />
+                        </div>
                     </div>
                 </div>
             </div>

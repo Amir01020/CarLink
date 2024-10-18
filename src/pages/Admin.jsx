@@ -97,7 +97,7 @@ const Admin = () => {
 
 
     return (
-        <div className='flex'>
+        <div className='cont flex'>
             <div className="w-[30%] p-5">
                 {control.map((i) => (
                     <Text

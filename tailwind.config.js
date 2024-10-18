@@ -8,6 +8,7 @@ export default {
     extend: {
       screens: {
         'xs': '980px', // Custom breakpoint for extra small devices
+        'leptop': '1140px',
         '3xl': '1600px', // Custom breakpoint for extra large devices
       },
     },

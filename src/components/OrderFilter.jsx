@@ -25,10 +25,10 @@ const OrderFilter = ({ arr }) => {
 
     return (
         <div className="cont px-[10px] pt-[25px] flex justify-between items-center">
-            <div className="flex max-w-[400px]  gap-5 items-center">
+            <div className="flex max-w-[400px] gap-5 items-center">
                 {
                     arr.map((i, idx) => (
-                        <p key={idx} className='whitespace-nowrap text_anim text-[6px] text-[#585757]'>
+                        <p key={idx} className='whitespace-nowrap text_anim text-[6px] leptop:text-[10px] text-[#585757]'>
                             {i}
                             <div className="w-full bg-[#56CA00] h-[1px] rounded-[5px]"></div>
                         </p>
@@ -36,21 +36,20 @@ const OrderFilter = ({ arr }) => {
                 }
             </div>
             <div className="flex items-center gap-2">
-
-                <div className={`h-[20px] ${name_list_oupen ? 'rounded-[5px_5px_0px_0px] border-b-0' : 'rounded-[5px] border-[0.6px]'} relative w-[150px]  border-solid  bg-[#F9F9FB] border-[#D5D5D5] gap-1 flex items-center px-[8px]`}>
+                <div className={`h-[20px] ${name_list_oupen ? 'rounded-[5px_5px_0px_0px] border-b-0' : 'rounded-[5px] border-[0.6px]'} relative w-[150px] border-solid bg-[#F9F9FB] border-[#D5D5D5] gap-1 flex items-center px-[8px]`}>
                     <img className='w-[8px]' src="/search.svg" alt="" />
                     <input type="text" placeholder='Search for something'
-                        className='w-full outline-none placeholder-[#8BA3CB] text-[8px] bg-transparent' name="" id="" />
+                        className='w-full outline-none placeholder-[#8BA3CB] text-[8px] leptop:text-[10px] bg-transparent' name="" id="" />
                     <img src="/Path1.svg" className='cursor-pointer w-[8px]' onClick={all_list_click} alt="" />
-                    <div className={`absolute ${all_list_oupen ? 'scale-y-[1]  border-[0.6px]' : 'scale-y-[0]'} px-[10px] bottom-0 border-[0.6px] border-solid rounded-[0px_0px_5px_5px] border-[#D5D5D5] translate-y-[100%] overflow-auto w-full left-0 max-h-[200px] bg-[#F9F9FB]`}>
-                        <p className='text_anim1 text-[6px] py-1 font-[600]'>
+                    <div className={`absolute ${all_list_oupen ? 'scale-y-[1] border-[0.6px]' : 'scale-y-[0]'} px-[10px] bottom-0 border-[0.6px] border-solid rounded-[0px_0px_5px_5px] border-[#D5D5D5] translate-y-[100%] overflow-auto w-full left-0 max-h-[200px] bg-[#F9F9FB]`}>
+                        <p className='text_anim1 text-[6px] leptop:text-[10px] py-1 font-[600]'>
                             02.09.2024
                             <div className="w-full bg-[#0047E1] h-[1px] rounded-[5px]"></div>
                         </p>
                     </div>
                 </div>
                 <input type="text"
-                    className={`h-5 text-[8px] w-[120px] rounded-[5px] border-[0.6px] border-[#D5D5D5] px-1 outline-none`}
+                    className={`h-5 text-[8px] leptop:text-[10px] w-[120px] rounded-[5px] border-[0.6px] border-[#D5D5D5] px-1 outline-none`}
                     name="" id="" />
                 <button className='h-5 w-5 bg-[#0047E1] text-white rounded-md flex justify-center items-center'>
                     <IoSearch className='text-[12px]' />
@@ -61,12 +60,12 @@ const OrderFilter = ({ arr }) => {
                     </svg>
                 </Link>
                 <div onClick={name_list_click}
-                    className={`border-[0.6px] ${name_list_oupen ? 'rounded-[5px_5px_0px_0px] border-b-0' : 'rounded-[5px]'} cursor-pointer relative min-w-[80px] py-1 h-fit border-solid  bg-[#F9F9FB] border-[#D5D5D5]`}>
-                    <p className='flex items-center text-[6px] pl-[10px] justify-between pr-2'>
-                        Alan  <img src="/Path1.svg" className='w-3' alt="" />
+                    className={`border-[0.6px] ${name_list_oupen ? 'rounded-[5px_5px_0px_0px] border-b-0' : 'rounded-[5px]'} cursor-pointer relative min-w-[80px] py-1 h-fit border-solid bg-[#F9F9FB] border-[#D5D5D5]`}>
+                    <p className='flex items-center text-[6px] leptop:text-[10px] pl-[10px] justify-between pr-2'>
+                        Alan <img src="/Path1.svg" className='w-3' alt="" />
                     </p>
-                    <div className={`absolute ${name_list_oupen ? 'text-center  scale-y-[1]  border-[0.6px]' : 'scale-y-[0]'} px-[10px] bottom-0 border-[0.6px] border-solid rounded-[0px_0px_5px_5px] border-[#D5D5D5] translate-y-[100%] overflow-auto w-full left-0 max-h-[200px] bg-[#F9F9FB]`}>
-                        <p className='text_anim1 text-[6px] py-1 font-[600]'>
+                    <div className={`absolute ${name_list_oupen ? 'text-center scale-y-[1] border-[0.6px]' : 'scale-y-[0]'} px-[10px] bottom-0 border-[0.6px] border-solid rounded-[0px_0px_5px_5px] border-[#D5D5D5] translate-y-[100%] overflow-auto w-full left-0 max-h-[200px] bg-[#F9F9FB]`}>
+                        <p className='text_anim1 text-[6px] leptop:text-[10px] py-1 font-[600]'>
                             02.09.2024
                             <div className="w-full bg-[#0047E1] h-[1px] rounded-[5px]"></div>
                         </p>
@@ -74,6 +73,7 @@ const OrderFilter = ({ arr }) => {
                 </div>
             </div>
         </div>
+
 
 
     );
